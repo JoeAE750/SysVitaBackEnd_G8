@@ -28,7 +28,7 @@ def add_usuario():
 
     return jsonify({'message': 'Usuario creado', 'status': 'exito', 'usuario': new_usuario.to_dict()}), 201
 
-@Usuario_routes.route('/usuarios/email/<string:email>', methods=['POST'])
+@Usuario_routes.route('/usuarios/email/<string:email>', methods=['GET'])
 def get_usuario_by_email(email):
     usuario = Usuario.query.filter_by(email=email).first()
     if usuario:
