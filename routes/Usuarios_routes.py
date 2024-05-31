@@ -2,6 +2,7 @@ from flask import Blueprint, jsonify,request
 
 from utils.extensions import db
 from models.Usuario import *
+from models.Facultad import Facultad
 
 Usuarios_routes = Blueprint("Usuarios_routes", __name__)
 
