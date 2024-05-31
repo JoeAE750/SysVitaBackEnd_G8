@@ -1,4 +1,4 @@
-from .extensions import db 
+from utils.extensions import db 
 
 class Facultad(db.Model):
     __tablename__ = 'facultades'
