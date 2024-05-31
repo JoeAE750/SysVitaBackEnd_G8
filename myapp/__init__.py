@@ -8,7 +8,7 @@ from .routes import main
 def create_app():
     app = Flask(__name__)
 
-    app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://sysvitadb_user:NBBRKfOPt4enLTkMZrcrWjTUzsGd5FRO@dpg-cpal71v109ks73aq24s0-a.oregon-postgres.render.com/sysvitadb"
+    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
     # "postgres://sysvitadb_user:NBBRKfOPt4enLTkMZrcrWjTUzsGd5FRO@dpg-cpal71v109ks73aq24s0-a.oregon-postgres.render.com/sysvitadb"
 
     db.init_app(app)

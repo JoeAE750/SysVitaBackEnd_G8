@@ -13,6 +13,6 @@ def index():
 
 @main.route('/add/<username>')
 def add_user(username):
-    db.session.add(Facultad(id_facultad=1,nombre=username))
+    db.session.add(Facultad(id_facultad=100,nombre=username))
     db.session.commit()
     return redirect(url_for("main.index"))
