@@ -10,7 +10,7 @@ class Usuario(db.Model):
     genero = db.Column(db.String(8))
     dni = db.Column(db.String(8))
     email = db.Column(db.String(254))
-    contrasena = db.Column(db.String(32))
+    contrasena = db.Column(db.String(60))
 
     def __init__(self, id_usuario, id_facultad, nombre, apellido, fecha_nac, genero, dni, email, contrasena):
         self.id_usuario = id_usuario
